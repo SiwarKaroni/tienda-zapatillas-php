@@ -1,0 +1,641 @@
+/* ----------------- RESET ----------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----------------- BODY GENERAL ----------------- */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #111;
+    min-height: 100vh;
+}
+
+/* ----------------- FORMULARIOS GENERALES ----------------- */
+form {
+    max-width: 450px;
+    margin: 60px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #111;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #111;
+}
+
+/* ----------------- BOTONES ----------------- */
+button, .btn {
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background: #333;
+}
+
+/* ----------------- MENSAJES ----------------- */
+.error-message {
+    background: #FF4E4A20;
+    color: #FF4E4A;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.success-message {
+    background: #1EAA5220;
+    color: #1EAA52;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ----------------- ADMIN TABLA ----------------- */
+.admin-table {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+}
+
+.admin-table th, .admin-table td {
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.admin-table th {
+    background: #111;
+    color: #fff;
+    font-weight: 700;
+}
+
+.admin-table td a, .admin-table td button {
+    background: #111;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.admin-table td a:hover, .admin-table td button:hover {
+    background: #333;
+}
+
+/* ----------------- ADMIN FORM ----------------- */
+.admin-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.admin-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.admin-form input, 
+.admin-form textarea, 
+.admin-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.admin-form input:focus, 
+.admin-form textarea:focus, 
+.admin-form select:focus {
+    outline: none;
+    border-color: #111;
+}
+
+/* ----------------- INPUT FILE ----------------- */
+input[type="file"] {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    cursor: pointer;
+}
+
+/* ----------------- DASHBOARD / SIDEBAR ----------------- */
+.dashboard, .dashboard-home {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+.sidebar {
+    position: fixed;  
+    top: 0;           
+    left: 0;         
+    height: 100vh;    
+    z-index: 999;     
+    overflow-y: auto; 
+    width: 220px;
+    background: #111; 
+    color: #fff; 
+    display: flex; 
+    flex-direction: column;
+}
+
+
+.dashboard-content {
+    margin-left: 220px; 
+}
+
+.sidebar .logo {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background: #333;
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 40px;
+    background: #f5f5f5;
+}
+
+.dashboard-content h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* ----------------- HERO ----------------- */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: #eee;
+    border-radius: 16px;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 25px;
+    background: #111;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: #333;
+}
+
+/* ----------------- CATALOGO HOME ----------------- */
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(4,1fr); /* 6 columnas para home */
+    gap: 20px;
+    padding: 30px;
+}
+
+.catalog .product-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.catalog .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.catalog .product-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.catalog .product-card .info {
+    padding: 15px;
+    text-align: center;
+}
+
+.catalog .product-card .info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #111;
+}
+
+.catalog .product-card .info p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    min-height: 38px;
+}
+
+.catalog .product-card .info strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+/* BOTONES CATALOGO */
+.catalog .product-card .btn, 
+.catalog .product-card .btn-action {
+    background: #111;
+    color: #fff;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    width: calc(100% - 30px);
+    margin: 0 auto 15px auto;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.catalog .product-card .btn:hover, 
+.catalog .product-card .btn-action:hover {
+    background: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ----------------- BOTONES DE ACCION ADMIN ----------------- */
+.admin-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.admin-actions .btn {
+    min-width: 180px;
+}
+
+/* ----------------- FORMULARIO AGREGAR PRODUCTO ----------------- */
+.admin-form {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.admin-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.admin-form input, 
+.admin-form textarea, 
+.admin-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.admin-form input:focus, 
+.admin-form textarea:focus, 
+.admin-form select:focus {
+    outline: none;
+    border-color: #111;
+}
+
+/* ----------------- GRID PRODUCTOS EXISTENTES ADMIN ----------------- */
+#product-list {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+}
+
+#product-list .catalog {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+#product-list .product-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+#product-list .product-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+#product-list .product-card .info h3 {
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+#product-list .product-card .info p {
+    font-size: 10px;
+    color: #555;
+    margin-bottom: 4px;
+    min-height: 20px;
+}
+
+#product-list .product-card .info strong {
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+#product-list .product-card .btn-action {
+    font-size: 11px;
+    padding: 5px 8px;
+    width: calc(100% - 16px);
+    margin: 0 auto 8px auto;
+    border-radius: 12px;
+}
+.cart-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.cart-container h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* ===== ESTILO CARRITO MODERNO ===== */
+
+/* Contenedor principal */
+.cart-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* Título */
+.cart-container h2 {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #111;
+}
+
+/* Tabla o listado */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-table th, .cart-table td {
+    padding: 14px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.cart-table th {
+    background: #111;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Foto producto */
+.cart-table td img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Selector de cantidad */
+.cart-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.cart-quantity button {
+    background: #111;
+    color: #fff;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cart-quantity button:hover {
+    background: #333;
+}
+
+.cart-quantity input {
+    width: 42px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 6px;
+}
+
+/* Botón quitar */
+.btn-remove {
+    background: #ff4e4a;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-remove:hover {
+    background: #d13c38;
+}
+
+/* Resumen del total */
+.cart-summary {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.cart-summary span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #111;
+}
+
+.cart-summary .btn-checkout {
+    background: #111;
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cart-summary .btn-checkout:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Mensaje carrito vacío */
+.cart-empty {
+    text-align: center;
+    font-size: 18px;
+    padding: 40px;
+    color: #555;
+}
+/* Check animado */
+.checkmark {
+    font-size: 60px;
+    color: #1EAA52;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: pop 0.6s ease;
+}
+
+@keyframes pop {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+
+/* ----------------- RESPONSIVE ----------------- */
+@media (max-width: 1200px) {
+    .catalog { grid-template-columns: repeat(4, 1fr); }
+    #product-list .catalog { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 992px) {
+    .catalog { grid-template-columns: repeat(3, 1fr); }
+    #product-list .catalog { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .catalog, #product-list .catalog { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+    .catalog, #product-list .catalog { grid-template-columns: 1fr; }
+}
